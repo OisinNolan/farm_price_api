@@ -1,3 +1,8 @@
+import numpy as np
+
+""" File with a dummy data """
+
+
 S = np.array([[1, 1, 0, 1, 0],
               [0, 1, 1, 1, 0],
               [0, 1, 1, 1, 0],
@@ -10,3 +15,11 @@ P = np.array([[10, 3, 4, 2, 1],
 
 DISTANCES = np.array([3, 2, 2, 3]) # distance from the shop
 PDIST_COST = 2 # price of gas
+
+inputs_ = {
+    'shop_buys': S,
+    'food_weights': W,
+    'food_prices': P,
+    'shop_distances': DISTANCES,
+    'gas_price': PDIST_COST,
+}

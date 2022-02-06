@@ -1,17 +1,17 @@
-from typing import Optional
+from typing import List
 
 from fastapi import FastAPI
 from pydantic import BaseModel
 
 from main import find_buyers as find_buyers_
-from mock_input import *
+from mock_input import inputs_
 
 class Inputs(BaseModel):
-    shop_buys: List[int] = S
-    food_weights: List[int] = W
-    food_prices: List[int] = P
-    shop_distances: List[int] = DISTANCES
-    gas_price: int = PDIST_COST
+    shop_buys: List[List[int]]
+    food_weights: List[int]
+    food_prices: List[int]
+    shop_distances: List[int]
+    gas_price: int
 
 class Visit(BaseModel):
     shop: int
@@ -24,7 +24,7 @@ app = FastAPI()
 
 @app.post("/find_buyers/")
 async def find_buyers(inputs: Inputs):
-    i = inputs
+    i = inputs_
     ordered_buyer_list: Output = find_buyers_(
         i.shop_buys,
         i.food_weights,
