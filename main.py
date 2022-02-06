@@ -66,6 +66,6 @@ def find_buyers(availability, quantity, profits, distance, pdist_cost):
     return shop_crops
 
 # order by the distance
-shop_crops = find_buyers(s, w, p, distance, pdist_cost)
-print(shop_crops)
+# shop_crops = find_buyers(s, w, p, distance, pdist_cost)
+#print(shop_crops)
 #print(best_objectives)
