@@ -4,3 +4,4 @@
   * Type and amount of produce to sell (e.g. 40kg potatos)
   * Estimated transportation cost
   * Date at which to sell
+* This functionality is served by a REST API implemented using [FastAPI](https://fastapi.tiangolo.com/).
